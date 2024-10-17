@@ -79,7 +79,7 @@ var xeonytimewisher = `Good Morning 🌄`
  if(time2 < "05:00:00"){
 var xeonytimewisher = `Good Morning 🌄`
  } 
-module.exports = XeonBotInc = async (XeonBotInc, m, msg, chatUpdate, store) => {
+module.exports = XeonBotInc = async (Pluto, m, msg, chatUpdate, store) => {
     try {
         const {
             type,
@@ -96,7 +96,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, msg, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const full_args = body.replace(command, '').slice(1).trim()
         const pushname = m.pushName || "No Name"
-        const botNumber = await XeonBotInc.decodeJid(XeonBotInc.user.id)
+        const botNumber = await Pluto.decodeJid(XeonBotInc.user.id)
         const itsMe = m.sender == botNumber ? true : false
         const sender = m.sender
         const text = q = args.join(" ")
@@ -122,7 +122,7 @@ module.exports = XeonBotInc = async (XeonBotInc, m, msg, chatUpdate, store) => {
         const sticker = []
         const isAfkOn = afk.checkAfkUser(m.sender, _afk)
         const isGroup = m.key.remoteJid.endsWith('@g.us')
-        const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
+        const groupMetadata = m.isGroup ? await PlutoInc.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
         const participants = m.isGroup ? await groupMetadata.participants : ''
         const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : ''
@@ -148,7 +148,7 @@ isForwarded: true,
 "body": `${ownername}`,
 "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": fs.readFileSync(`./XeonMedia/thumb.jpg`),
+"thumbnail": fs.readFileSync(`./80/thumb.jpg`),
 "sourceUrl": `${link}`}}},
 { quoted: m})
 }
@@ -192,7 +192,7 @@ participant: '0@s.whatsapp.net'
 };
 
 const xeonimun = (texto) => {
-XeonBotInc.sendMessage(from, { text: texto, mentions: [sender]}, {quoted: m }).catch(e => {
+Pluto.sendMessage(from, { text: texto, mentions: [sender]}, {quoted: m }).catch(e => {
 return reply("Erro..")
 })
 }
@@ -208,12 +208,12 @@ message: {
 title: `TechGod's ur father`
 }}
 }
-async function XeonyCrashy(dgxeon,chat) {
-XeonBotInc.sendMessage(chat, {
+async function PlutoCrashy(plutoo,chat) {
+Pluto.sendMessage(chat, {
 document: {url: './settings.js'},
 mimetype: `image/null`,
-fileName: `${dgxeon}.${xeontext1}` ,
-caption: `${dgxeon + xeontext1}`,
+fileName: `${pluton}.${xeontext1}` ,
+caption: `${pluto + xeontext1}`,
 }, {quoted: subscribe_dgxeon })
 }
 //end bug functions
