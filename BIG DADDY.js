@@ -1,10 +1,10 @@
-//base by BIG DADDY (Phistar Bot Inc.)
-//YouTube: @Phistar
-//Instagram: @Phistar
-//Telegram: @BIG DADDY 
-//GitHub: @Phistar
-//WhatsApp: +23428019141
-//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@phistar
+//base by DGXeon
+//YouTube: @MrBeast
+//Instagram: @MrBeast
+//Telegram: @Pluto
+//GitHub: @Plut0TK
+//WhatsApp: +2347036314248
+//want more free bot scripts? subscribe to my youtube channel: https://youtube.com/@MrBeast
 
 const { default: makeWASocket, fetchLatestBaileysVersion, downloadContentFromMessage, useMultiFileAuthState, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@whiskeysockets/baileys')
 const os = require('os')
