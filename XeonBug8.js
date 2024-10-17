@@ -86,7 +86,7 @@ var xeonytimewisher = `Good Morning 🌄`
  if(time2 < "05:00:00"){
 var xeonytimewisher = `Good Morning 🌄`
  } 
-module.exports = GlobalTechInc = async (GlobalTechInc, m, msg, chatUpdate, store) => {
+module.exports = Pluto = async (Pluto, m, msg, chatUpdate, store) => {
     try {
         const {
             type,
@@ -103,7 +103,7 @@ module.exports = GlobalTechInc = async (GlobalTechInc, m, msg, chatUpdate, store
         const args = body.trim().split(/ +/).slice(1)
         const full_args = body.replace(command, '').slice(1).trim()
         const pushname = m.pushName || "No Name"
-        const botNumber = await GlobalTechInc.decodeJid(GlobalTechInc.user.id)
+        const botNumber = await GlobalTechInc.decodeJid(Pluto.user.id)
         const itsMe = m.sender == botNumber ? true : false
         const sender = m.sender
         const text = q = args.join(" ")
@@ -139,8 +139,8 @@ module.exports = GlobalTechInc = async (GlobalTechInc, m, msg, chatUpdate, store
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
         const isCreator = [ownernumber, ..._owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const isPremium = isCreator || isCreator || checkPremiumUser(m.sender, premium);
-        const clientId = GlobalTechInc.user.id.split(':')[0];
-        const senderbot = m.key.fromMe ? GlobalTechInc.user.id.split(':')[0] + "@s.whatsapp.net" || GlobalTechInc.user.id : m.key.participant || m.key.remoteJid;
+        const clientId = Pluto.user.id.split(':')[0];
+        const senderbot = m.key.fromMe ? Pluto.user.id.split(':')[0] + "@s.whatsapp.net" || GlobalTechInc.user.id : m.key.participant || m.key.remoteJid;
         const senderId = senderbot.split('@')[0];
         const isBot = clientId.includes(senderId);
         expiredCheck(GlobalTechInc, m, premium);
@@ -159,7 +159,7 @@ isForwarded: true,
 "body": `${ownername}`,
 "previewType": "PHOTO",
 "thumbnailUrl": ``,
-"thumbnail": fs.readFileSync(`./GlobalMedia/thumb.jpg`),
+"thumbnail": fs.readFileSync(`./80/thumb.jpg`),
 "sourceUrl": `${link}`}}},
 { quoted: m})
 }
